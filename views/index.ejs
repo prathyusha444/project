@@ -1,0 +1,31 @@
+<table>
+  <tr>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Deposits</th>
+      <th>Withdrawls</th>
+      <th>Balance</th>
+  </tr>
+
+  <tbody>
+      <% for (var a = 0; a < users.length; a++) { %>
+      <tr>
+          <td><%= users[a].Date%></td>
+          <td><%= users[a].Description%></td>
+          <td><%= users[a].Deposits%></td>
+          <td><%= users[a].Withdrawls%></td>
+          <td><%= users[a].Balance%></td>
+      </tr>
+      <% } %>
+  </tbody>
+</table>
+
+<ul class="pagination">
+  <% for (var a = 1; a <= pages; a++) { %>
+  <li>
+      <a href="?page=<%= a; %>">
+          <%= a; %>
+      </a>
+  </li>
+  <% } %>
+</ul>
